@@ -7,7 +7,7 @@ import Divider from '@mui/material/Divider';
 import DataTable from './DataTable';
 import StatDescriptionCard from './StatDescriptionCard';
 import { Typography } from '@mui/material';
-import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
+import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
 import { pink } from '@mui/material/colors';
 import { green } from '@mui/material/colors';
 import Table from '@mui/material/Table';
@@ -64,8 +64,8 @@ function Home(){
             <Grid item pl={2}>
                <Grid container justifyContent="left" alignItems="flex-end">
                   <Typography variant="h3">1,230</Typography>
-                  <ArrowDownwardIcon sx={{ color: pink[500] }}/>
-                  <Typography color={{ color: pink[500] }}>1.01%</Typography>
+                  <ArrowUpwardIcon sx={{ color: green[500] }}/>
+                  <Typography color={{ color: green[500] }}>1.01%</Typography>
                </Grid>
                <Typography align="left">As of 10:49pm HKT</Typography>
             </Grid>
@@ -92,7 +92,7 @@ function Home(){
                <Line type="monotone" dataKey="open" stroke="#8884d8" />
                <Line type="monotone" dataKey="close" stroke="#82ca9d" />
                <CartesianGrid stroke="#ccc" strokeDasharray="5 5" />
-               <XAxis dataKey="name" />
+               <XAxis dataKey="date" />
                <YAxis />
                <Tooltip />
             </LineChart>

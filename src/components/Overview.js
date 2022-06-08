@@ -48,8 +48,8 @@ const Item = styled(Paper)(({ theme }) => ({
    color: theme.palette.text.secondary,
  }));
 
-const data = [{name: '06/07/2022', open: 400, close: 2500, amt: 2400}, {name: '07/07/2022', open: 100, close: 2400, amt: 3000}, 
-               {name: '08/07/2022', open: 600, close: 1200, amt: 2400}, {name: '09/07/2022', open: 500, close: 2400, amt: 2400}];
+const data = [{date: '06/07/2022', open: 400, close: 2500, amt: 2400}, {date: '07/07/2022', open: 100, close: 2400, amt: 3000}, 
+               {date: '08/07/2022', open: 600, close: 1200, amt: 2400}, {date: '09/07/2022', open: 500, close: 2400, amt: 2400}];
 
 function Home(){
    return(
@@ -94,7 +94,7 @@ function Home(){
                <Line type="monotone" dataKey="open" stroke="#8884d8" />
                <Line type="monotone" dataKey="close" stroke="#82ca9d" />
                <CartesianGrid stroke="#ccc" strokeDasharray="5 5" />
-               <XAxis dataKey="name" />
+               <XAxis dataKey="date" />
                <YAxis />
                <Tooltip />
             </LineChart>
@@ -106,8 +106,10 @@ function Home(){
                <Table sx={{ minWidth: 300 }} aria-label="simple table">
                <TableHead>
                   <TableRow>
-                     <TableCell sx={{ fontWeight: 'bold' }}>Top 5 Stock</TableCell>
-                  </TableRow>
+               <TableCell align="center" colSpan={2}>
+                  Top 5 Stocks
+               </TableCell>
+               </TableRow>
                </TableHead>
                <TableBody>
                   {rows.map((row) => (
