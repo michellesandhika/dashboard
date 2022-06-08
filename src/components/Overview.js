@@ -16,7 +16,7 @@ import TableCell from '@mui/material/TableCell';
 import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
-// import {data} from './Data'
+
 
 import { LineChart, Line, CartesianGrid, XAxis, YAxis, Tooltip } from 'recharts';
 
@@ -130,8 +130,6 @@ function Home(){
                <DataTable/>
          </Grid>
          <Grid item xs={4}>
-            <Item>
-               {/* insert boxtail */}
             <Grid item xs>
             <TableContainer component={Paper}>
                <Table sx={{ minWidth: 300 }} aria-label="simple table">
@@ -157,8 +155,6 @@ function Home(){
                </Table>
             </TableContainer>
             </Grid>
-            </Item>
-            
          </Grid>
          </Grid>
 

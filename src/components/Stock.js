@@ -16,6 +16,8 @@ import TableCell from '@mui/material/TableCell';
 import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
+import DoughnutChart from './DoughnutChart';
+
 // import {data} from './Data'
 
 import { LineChart, Line, CartesianGrid, XAxis, YAxis, Tooltip } from 'recharts';
@@ -126,10 +128,13 @@ function Home(){
          <Grid item xs={8}>
                <DataTable/>
          </Grid>
-         {/* <Grid item xs={4}>
-            <Item>xs=8</Item>
-         </Grid> */}
+         <Grid item xs={4}>
+            <Item>
+            <DoughnutChart/>
+            </Item>
          </Grid>
+         </Grid>
+         
 
       </Box>
    </Box>
